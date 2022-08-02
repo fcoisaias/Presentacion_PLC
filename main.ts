@@ -9,6 +9,15 @@ function contar () {
     }
     veces = 3
 }
+function basico1 () {
+    for (let index = 0; index < 2; index++) {
+        basic.showIcon(IconNames.Heart)
+        basic.pause(500)
+        basic.showIcon(IconNames.SmallHeart)
+        basic.pause(500)
+        basic.clearScreen()
+    }
+}
 function CAMINITO () {
     X = 0
     Y = 0
@@ -66,17 +75,8 @@ function basico2 () {
         basic.clearScreen()
     }
 }
-function basico () {
-    for (let index = 0; index < 2; index++) {
-        basic.showIcon(IconNames.Heart)
-        basic.pause(500)
-        basic.showIcon(IconNames.SmallHeart)
-        basic.pause(500)
-        basic.clearScreen()
-    }
-}
 basic.forever(function () {
-    basico()
+    basico1()
     contar()
     basico2()
     contar()
