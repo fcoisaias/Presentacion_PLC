@@ -2,10 +2,12 @@ let veces = 0
 let X = 0
 let Y = 0
 function contar () {
+    veces = 3
     while (veces >= 0) {
         basic.showNumber(veces)
         veces = veces - 1
     }
+    veces = 3
 }
 function CAMINITO () {
     X = 0
@@ -51,18 +53,8 @@ function _0Y1 () {
         basic.pause(500)
     }
 }
-function basico () {
-    veces = 5
-    contar()
-    for (let index = 0; index < 20; index++) {
-        basic.showIcon(IconNames.Heart)
-        basic.pause(500)
-        basic.showIcon(IconNames.SmallHeart)
-        basic.pause(500)
-    }
-    basic.clearScreen()
-    contar()
-    for (let index = 0; index < 20; index++) {
+function basico2 () {
+    for (let index = 0; index < 2; index++) {
         basic.showIcon(IconNames.Happy)
         basic.pause(500)
         basic.showIcon(IconNames.Asleep)
@@ -71,11 +63,23 @@ function basico () {
         basic.pause(500)
         basic.showIcon(IconNames.Sad)
         basic.pause(500)
+        basic.clearScreen()
     }
-    contar()
+}
+function basico () {
+    for (let index = 0; index < 2; index++) {
+        basic.showIcon(IconNames.Heart)
+        basic.pause(500)
+        basic.showIcon(IconNames.SmallHeart)
+        basic.pause(500)
+        basic.clearScreen()
+    }
 }
 basic.forever(function () {
     basico()
+    contar()
+    basico2()
+    contar()
     CAMINITO()
     contar()
     _0Y1()
