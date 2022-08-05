@@ -84,4 +84,5 @@ basic.forever(function () {
     contar()
     _0Y1()
     contar()
+    music.playMelody("B A G A G F A C5 ", 500)
 })
